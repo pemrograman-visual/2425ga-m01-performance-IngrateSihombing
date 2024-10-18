@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="M01"/>
+        <attribute name="authors" value="ingra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-18 10:24:13 AM"/>
+        <attribute name="created" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE4OzA5OjU0OjMxIEFNOzI1NjI="/>
+        <attribute name="edited" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE4OzEwOjI0OjEzIEFNOzE7MjY1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalcredit, index" type="Integer" array="False" size=""/>
+            <declare name="performance, temporaryindex, lastperformance, numbervalue, A, AB, B, BC, C, D, E" type="Real" array="False" size=""/>
+            <declare name="credit1" type="Real" array="False" size=""/>
+            <assign variable="credit1" expression="0"/>
+            <declare name="lettergrade, credit" type="String" array="False" size=""/>
+            <assign variable="totalcredit" expression="0"/>
+            <input variable="credit"/>
+            <while expression="credit !=&quot;---&quot;">
+                <if expression="credit =&quot;---&quot;">
+                    <then>
+                        <assign variable="credit" expression="credit"/>
+                    </then>
+                    <else>
+                        <assign variable="credit1" expression="toReal(credit)"/>
+                    </else>
+                </if>
+                <input variable="lettergrade"/>
+                <if expression="lettergrade =&quot;A&quot;">
+                    <then>
+                        <assign variable="temporaryindex" expression="4.0"/>
+                    </then>
+                    <else>
+                        <if expression="lettergrade=&quot;AB&quot;">
+                            <then>
+                                <assign variable="temporaryindex" expression="3.5"/>
+                            </then>
+                            <else>
+                                <if expression="lettergrade=&quot;B&quot;">
+                                    <then>
+                                        <assign variable="temporaryindex" expression="3.0"/>
+                                    </then>
+                                    <else>
+                                        <if expression="lettergrade=&quot;BC&quot;">
+                                            <then>
+                                                <assign variable="temporaryindex" expression="2.5"/>
+                                            </then>
+                                            <else>
+                                                <if expression="lettergrade=&quot;C&quot;">
+                                                    <then>
+                                                        <assign variable="temporaryindex" expression="2.0"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="lettergrade=&quot;D&quot;">
+                                                            <then>
+                                                                <assign variable="temporaryindex" expression="1.0"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="lettergrade=&quot;E&quot;">
+                                                                    <then>
+                                                                        <assign variable="temporaryindex" expression="0.0"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="temporaryindex" expression="0.0"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="lastperformance" expression="toReal(credit)*temporaryindex"/>
+                <output expression="toFixed(lastperformance,1)" newline="True"/>
+                <input variable="credit"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

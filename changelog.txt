@@ -1,4 +1,3 @@
 Kami telah menyelesaikan praktikum Ujian Tengah Semester
 Kami telah berhasil memperbaiki error
 Kami berhasil menggunakan inputoutput, assign, breanching, loopingan
-Kami berhasil menyelesaikan permasalahan

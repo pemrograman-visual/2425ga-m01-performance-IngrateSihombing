@@ -1,6 +1,5 @@
 //12S24022-Ingrate Joy Sihombing
 //12S24015-LucasPardede
-
 import java.util.*;
 import java.lang.Math;
 

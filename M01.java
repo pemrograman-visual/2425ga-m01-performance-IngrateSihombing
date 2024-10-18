@@ -7,44 +7,44 @@ public class M01 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int totalcredit, index;
-        double performance, temporaryindex, lastperformance, numbervalue, a, aB, b, bC, c, d, e;
-        double credit1;
+        int totalkredit, indeks;
+        double performa, indekssementara, performaakhir, nilaiangka, a, aB, b, bC, c, d, e;
+        double kredit1;
 
-        credit1 = 0;
-        String lettergrade;
+        kredit1 = 0;
+        String nilaihuruf, kredit;
 
-        totalcredit = 0;
-        credit = input.nextLine();
-        while (credit != "---") {
-            if (credit == "---") {
-                credit = credit;
+        totalkredit = 0;
+        kredit = input.nextLine();
+        while (!kredit.equals("---")) {
+            if (kredit.equals("---")) {
+                kredit = kredit;
             } else {
-                credit1 = Integer.parseDouble(credit);
+                kredit1 = Integer.parseDouble(kredit);
             }
-            lettergrade = input.nextLine();
-            if (lettergrade.equals("A")) {
-                temporaryindex = 4.0;
+            nilaihuruf = input.nextLine();
+            if (nilaihuruf.equals("A")) {
+                indekssementara = 4.0;
             } else {
-                if (lettergrade.equals("AB")) {
-                    temporaryindex = 3.5;
+                if (nilaihuruf.equals("AB")) {
+                    indekssementara = 3.5;
                 } else {
-                    if (lettergrade.equals("B")) {
-                        temporaryindex = 3.0;
+                    if (nilaihuruf.equals("B")) {
+                        indekssementara = 3.0;
                     } else {
-                        if (lettergrade.equals("BC")) {
-                            temporaryindex = 2.5;
+                        if (nilaihuruf.equals("BC")) {
+                            indekssementara = 2.5;
                         } else {
-                            if (lettergrade.equals("C")) {
-                                temporaryindex = 2.0;
+                            if (nilaihuruf.equals("C")) {
+                                indekssementara = 2.0;
                             } else {
-                                if (lettergrade.equals("D")) {
-                                    temporaryindex = 1.0;
+                                if (nilaihuruf.equals("D")) {
+                                    indekssementara = 1.0;
                                 } else {
-                                    if (lettergrade.equals("E")) {
-                                        temporaryindex = 0.0;
+                                    if (nilaihuruf.equals("E")) {
+                                        indekssementara = 0.0;
                                     } else {
-                                        temporaryindex = 0.0;
+                                        indekssementara = "";
                                     }
                                 }
                             }
@@ -52,9 +52,9 @@ public class M01 {
                     }
                 }
             }
-            lastperformance = credit * temporaryindex;
-            System.out.println(toFixed(lastperformance,1));
-            credit = input.nextLine();
+            performaakhir = Integer.parseDouble(kredit) * indekssementara;
+            System.out.println(toFixed(performaakhir,1));
+            kredit = input.nextLine();
         }
     }
     

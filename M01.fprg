@@ -4,66 +4,66 @@
         <attribute name="name" value="M01"/>
         <attribute name="authors" value="ingra"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-10-18 11:43:51 AM"/>
-        <attribute name="created" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE4OzA5OjU0OjMxIEFNOzI1NjI="/>
-        <attribute name="edited" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE4OzExOjQzOjUxIEFNOzExOzI3MTI="/>
+        <attribute name="saved" value="2024-10-18 11:47:37 AM"/>
+        <attribute name="created" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE3OzAzOjM5OjE4IFBNOzI1Nzg="/>
+        <attribute name="edited" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE4OzExOjQ3OjM3IEFNOzI7MjY3Mg=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="totalcredit, index" type="Integer" array="False" size=""/>
-            <declare name="performance, temporaryindex, lastperformance, numbervalue, A, AB, B, BC, C, D, E" type="Real" array="False" size=""/>
-            <declare name="credit1" type="Real" array="False" size=""/>
-            <assign variable="credit1" expression="0"/>
-            <declare name="lettergrade" type="String" array="False" size=""/>
-            <assign variable="totalcredit" expression="0"/>
-            <input variable="credit"/>
-            <while expression="credit !=&quot;---&quot;">
-                <if expression="credit =&quot;---&quot;">
+            <declare name="totalkredit, indeks" type="Integer" array="False" size=""/>
+            <declare name="performa, indekssementara, performaakhir, nilaiangka, A, AB, B, BC, C, D, E" type="Real" array="False" size=""/>
+            <declare name="kredit1" type="Real" array="False" size=""/>
+            <assign variable="kredit1" expression="0"/>
+            <declare name="nilaihuruf, kredit" type="String" array="False" size=""/>
+            <assign variable="totalkredit" expression="0"/>
+            <input variable="kredit"/>
+            <while expression="kredit !=&quot;---&quot;">
+                <if expression="kredit=&quot;---&quot;">
                     <then>
-                        <assign variable="credit" expression="credit"/>
+                        <assign variable="kredit" expression="kredit"/>
                     </then>
                     <else>
-                        <assign variable="credit1" expression="toReal(credit)"/>
+                        <assign variable="kredit1" expression="toReal(kredit)"/>
                     </else>
                 </if>
-                <input variable="lettergrade"/>
-                <if expression="lettergrade =&quot;A&quot;">
+                <input variable="nilaihuruf"/>
+                <if expression="nilaihuruf=&quot;A&quot;">
                     <then>
-                        <assign variable="temporaryindex" expression="4.0"/>
+                        <assign variable="indekssementara" expression="4.0"/>
                     </then>
                     <else>
-                        <if expression="lettergrade=&quot;AB&quot;">
+                        <if expression="nilaihuruf=&quot;AB&quot;">
                             <then>
-                                <assign variable="temporaryindex" expression="3.5"/>
+                                <assign variable="indekssementara" expression="3.5"/>
                             </then>
                             <else>
-                                <if expression="lettergrade=&quot;B&quot;">
+                                <if expression="nilaihuruf=&quot;B&quot;">
                                     <then>
-                                        <assign variable="temporaryindex" expression="3.0"/>
+                                        <assign variable="indekssementara" expression="3.0"/>
                                     </then>
                                     <else>
-                                        <if expression="lettergrade=&quot;BC&quot;">
+                                        <if expression="nilaihuruf=&quot;BC&quot;">
                                             <then>
-                                                <assign variable="temporaryindex" expression="2.5"/>
+                                                <assign variable="indekssementara" expression="2.5"/>
                                             </then>
                                             <else>
-                                                <if expression="lettergrade=&quot;C&quot;">
+                                                <if expression="nilaihuruf=&quot;C&quot;">
                                                     <then>
-                                                        <assign variable="temporaryindex" expression="2.0"/>
+                                                        <assign variable="indekssementara" expression="2.0"/>
                                                     </then>
                                                     <else>
-                                                        <if expression="lettergrade=&quot;D&quot;">
+                                                        <if expression="nilaihuruf=&quot;D&quot;">
                                                             <then>
-                                                                <assign variable="temporaryindex" expression="1.0"/>
+                                                                <assign variable="indekssementara" expression="1.0"/>
                                                             </then>
                                                             <else>
-                                                                <if expression="lettergrade=&quot;E&quot;">
+                                                                <if expression="nilaihuruf=&quot;E&quot;">
                                                                     <then>
-                                                                        <assign variable="temporaryindex" expression="0.0"/>
+                                                                        <assign variable="indekssementara" expression="0.0"/>
                                                                     </then>
                                                                     <else>
-                                                                        <assign variable="temporaryindex" expression="0.0"/>
+                                                                        <assign variable="indekssementara" expression="&quot;&quot;"/>
                                                                     </else>
                                                                 </if>
                                                             </else>
@@ -78,9 +78,9 @@
                         </if>
                     </else>
                 </if>
-                <assign variable="lastperformance" expression="credit*temporaryindex"/>
-                <output expression="toFixed(lastperformance,1)" newline="True"/>
-                <input variable="credit"/>
+                <assign variable="performaakhir" expression="ToReal(kredit)*indekssementara"/>
+                <output expression="ToFixed(performaakhir,1)" newline="True"/>
+                <input variable="kredit"/>
             </while>
         </body>
     </function>

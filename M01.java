@@ -52,7 +52,7 @@ public class M01 {
                     }
                 }
             }
-            lastperformance = Integer.parseDouble(credit) * temporaryindex;
+            lastperformance = credit * temporaryindex;
             System.out.println(toFixed(lastperformance,1));
             credit = input.nextLine();
         }

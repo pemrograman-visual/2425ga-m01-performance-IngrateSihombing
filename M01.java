@@ -3,7 +3,7 @@
 import java.util.*;
 import java.lang.Math;
 
-public class M01 {
+public class JavaApplication {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -52,7 +52,7 @@ public class M01 {
                     }
                 }
             }
-            lastperformance = Integer.parseDouble(credit) * temporaryindex;
+            lastperformance = Integer.parseInt(credit) * temporaryindex;
             System.out.println(toFixed(lastperformance,1));
             credit = input.nextLine();
         }

@@ -7,41 +7,41 @@ public class M01 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int totalcredit, index;
+        int totalcredit, index, credit;
         double performance, temporaryindex, lastperformance, numbervalue, a, aB, b, bC, c, d, e;
         double credit1;
 
         credit1 = 0;
-        String lettergrade, credit;
+        double lettergrade;
 
         totalcredit = 0;
-        credit = input.nextLine();
-        while (!credit.equals("---")) {
-            if (credit.equals("---")) {
+        credit = Integer.parseInt(input.nextLine());
+        while (credit != "---") {
+            if (credit == "---") {
                 credit = credit;
             } else {
                 credit1 = Integer.parseDouble(credit);
             }
-            lettergrade = input.nextLine();
-            if (lettergrade.equals("A")) {
+            lettergrade = Double.parseDouble(input.nextLine());
+            if (lettergrade == "A") {
                 temporaryindex = 4.0;
             } else {
-                if (lettergrade.equals("AB")) {
+                if (lettergrade == "AB") {
                     temporaryindex = 3.5;
                 } else {
-                    if (lettergrade.equals("B")) {
+                    if (lettergrade == "B") {
                         temporaryindex = 3.0;
                     } else {
-                        if (lettergrade.equals("BC")) {
+                        if (lettergrade == "BC") {
                             temporaryindex = 2.5;
                         } else {
-                            if (lettergrade.equals("C")) {
+                            if (lettergrade == "C") {
                                 temporaryindex = 2.0;
                             } else {
-                                if (lettergrade.equals("D")) {
+                                if (lettergrade == "D") {
                                     temporaryindex = 1.0;
                                 } else {
-                                    if (lettergrade.equals("E")) {
+                                    if (lettergrade == "E") {
                                         temporaryindex = 0.0;
                                     } else {
                                         temporaryindex = 0.0;
@@ -52,9 +52,9 @@ public class M01 {
                     }
                 }
             }
-            lastperformance = credit1 * temporaryindex;
+            lastperformance = Integer.parseDouble(credit) * temporaryindex;
             System.out.println(toFixed(lastperformance,1));
-            credit = input.nextLine();
+            credit = Integer.parseInt(input.nextLine());
         }
     }
     

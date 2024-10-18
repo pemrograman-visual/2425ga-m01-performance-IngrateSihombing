@@ -4,18 +4,18 @@
         <attribute name="name" value="M01"/>
         <attribute name="authors" value="ingra"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-10-18 11:29:29 AM"/>
+        <attribute name="saved" value="2024-10-18 11:33:11 AM"/>
         <attribute name="created" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE4OzA5OjU0OjMxIEFNOzI1NjI="/>
-        <attribute name="edited" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE4OzExOjI5OjI5IEFNOzg7MjY3OQ=="/>
+        <attribute name="edited" value="aW5ncmE7SU5HUkFURUpPWTsyMDI0LTEwLTE4OzExOjMzOjExIEFNOzk7MjY2Ng=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="totalcredit, index" type="Integer" array="False" size=""/>
+            <declare name="totalcredit, index, credit" type="Integer" array="False" size=""/>
             <declare name="performance, temporaryindex, lastperformance, numbervalue, A, AB, B, BC, C, D, E" type="Real" array="False" size=""/>
             <declare name="credit1" type="Real" array="False" size=""/>
             <assign variable="credit1" expression="0"/>
-            <declare name="lettergrade, credit" type="String" array="False" size=""/>
+            <declare name="lettergrade" type="Real" array="False" size=""/>
             <assign variable="totalcredit" expression="0"/>
             <input variable="credit"/>
             <while expression="credit !=&quot;---&quot;">
@@ -78,7 +78,7 @@
                         </if>
                     </else>
                 </if>
-                <assign variable="lastperformance" expression="credit1*temporaryindex"/>
+                <assign variable="lastperformance" expression="toReal(credit)*temporaryindex"/>
                 <output expression="toFixed(lastperformance,1)" newline="True"/>
                 <input variable="credit"/>
             </while>
